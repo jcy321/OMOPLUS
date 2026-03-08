@@ -40,6 +40,43 @@ Secretary (Assistant) ← Result Aggregation, Exception Handling
 Sisyphus (Final Confirmation)
 ```
 
+### New Agent Design Philosophy
+
+#### Receptionist Agent: The Friendly Gatekeeper
+
+**Design Philosophy**: In OMO, users are immediately thrown into Sisyphus's complex orchestration system. This is overwhelming for newcomers who don't know what agents are available or how to phrase their requests effectively.
+
+**How Receptionist Helps**:
+- **Guided Onboarding**: Instead of a blank slate, users get a friendly greeting: "Hello! I'm the Receptionist. What would you like to work on today?"
+- **Complexity Assessment**: Receptionist evaluates whether the task needs Sisyphus's orchestration or can be handled directly
+- **Smart Routing**: Simple queries ("fix typo in README") go straight to execution; complex ones ("refactor authentication system") escalate to Sisyphus
+- **User Education**: Receptionist explains what's happening: "This is a complex task. I'm handing it to our technical lead, Sisyphus."
+
+**UX Improvement**: Users no longer feel lost. They have a clear entry point and understand the system's behavior.
+
+#### Secretary Agent: The Silent Coordinator
+
+**Design Philosophy**: In OMO, Sisyphus actively polls background tasks to check their status. This creates unnecessary token consumption and can feel "noisy" as Sisyphus frequently reports intermediate progress.
+
+**How Secretary Helps**:
+- **Result Aggregation**: Secretary collects outputs from all worker agents (explore, librarian, Hephaestus, etc.)
+- **Exception Detection**: Identifies failed tasks, timeouts, and inconsistencies without bothering Sisyphus
+- **Structured Summaries**: Presents clean, organized reports to Sisyphus only when all tasks complete or when intervention is needed
+- **Noise Reduction**: Sisyphus no longer interrupts with "Task X is still running..." messages
+
+**UX Improvement**: Users get cleaner, more focused interactions. Sisyphus appears only for meaningful decisions, not status updates.
+
+#### Comparison with OMO
+
+| Aspect | OMO | OMOPLUS |
+|--------|-----|---------|
+| **First Interaction** | Direct to Sisyphus (can be intimidating) | Receptionist guides you (friendly & approachable) |
+| **Simple Tasks** | Full orchestration overhead | Direct execution, minimal ceremony |
+| **Background Tasks** | Sisyphus polls repeatedly | Secretary aggregates silently |
+| **Status Updates** | Frequent intermediate reports | Clean final summaries |
+| **Learning Curve** | Steep (must understand all agents) | Gentle (Receptionist explains as needed) |
+| **Error Handling** | Sisyphus handles all exceptions | Secretary triages and escalates only critical issues |
+
 **Key Benefits**:
 - 🎯 **90% Cost Reduction**: Low-cost models for routine interactions, premium models for complex decisions
 - 🚀 **Better UX**: Guided requirement collection from vague ideas to clear plans
