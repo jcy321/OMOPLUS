@@ -6,6 +6,9 @@ export { createOracleAgent, ORACLE_PROMPT_METADATA } from "./oracle"
 export { createLibrarianAgent, LIBRARIAN_PROMPT_METADATA } from "./librarian"
 export { createExploreAgent, EXPLORE_PROMPT_METADATA } from "./explore"
 
+// OMOPLUS: New agents for better UX and cost efficiency
+export { createReceptionistAgent, RECEPTIONIST_PROMPT_METADATA } from "./receptionist"
+export { createSecretaryAgent, SECRETARY_PROMPT_METADATA } from "./secretary"
 
 export { createMultimodalLookerAgent, MULTIMODAL_LOOKER_PROMPT_METADATA } from "./multimodal-looker"
 export { createMetisAgent, METIS_SYSTEM_PROMPT, metisPromptMetadata } from "./metis"

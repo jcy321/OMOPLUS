@@ -1,12 +1,12 @@
 {
-  "name": "oh-my-opencode",
-  "version": "3.0.1",
-  "description": "The Best AI Agent Harness - Batteries-Included OpenCode Plugin with Multi-Model Orchestration, Parallel Background Agents, and Crafted LSP/AST Tools",
+  "name": "omoplus",
+  "version": "1.0.0",
+  "description": "OMOPLUS - Enhanced OpenCode Plugin with Receptionist Agent for Better UX and Cost Efficiency",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "bin": {
-    "oh-my-opencode": "./bin/oh-my-opencode.js"
+    "omoplus": "./bin/oh-my-opencode.js"
   },
   "files": [
     "dist",
@@ -34,22 +34,23 @@
   "keywords": [
     "opencode",
     "plugin",
-    "oracle",
-    "librarian",
+    "receptionist",
+    "secretary",
     "agents",
     "ai",
-    "llm"
+    "llm",
+    "cost-efficient"
   ],
-  "author": "YeonGyu-Kim",
+  "author": "jcy321",
   "license": "SUL-1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code-yeongyu/oh-my-opencode.git"
+    "url": "git+https://github.com/jcy321/OMOPLUS.git"
   },
   "bugs": {
-    "url": "https://github.com/code-yeongyu/oh-my-opencode/issues"
+    "url": "https://github.com/jcy321/OMOPLUS/issues"
   },
-  "homepage": "https://github.com/code-yeongyu/oh-my-opencode#readme",
+  "homepage": "https://github.com/jcy321/OMOPLUS#readme",
   "dependencies": {
     "@ast-grep/cli": "^0.40.0",
     "@ast-grep/napi": "^0.40.0",

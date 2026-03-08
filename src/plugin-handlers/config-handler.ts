@@ -29,6 +29,7 @@ import { log } from "../shared";
 import { getOpenCodeConfigPaths } from "../shared/opencode-config-dir";
 import { migrateAgentConfig } from "../shared/permission-compat";
 import { AGENT_NAME_MAP } from "../shared/migration";
+import { includesCaseInsensitive } from "../shared";
 import { PROMETHEUS_SYSTEM_PROMPT, PROMETHEUS_PERMISSION } from "../agents/prometheus-prompt";
 import { DEFAULT_CATEGORIES } from "../tools/delegate-task/constants";
 import type { ModelCacheState } from "../plugin-state";
@@ -217,7 +218,12 @@ export function createConfigHandler(deps: ConfigHandlerDeps) {
     const configAgent = config.agent as AgentConfig | undefined;
 
     if (isSisyphusEnabled && builtinAgents.sisyphus) {
-      (config as { default_agent?: string }).default_agent = "sisyphus";
+      const receptionistEnabled = !includesCaseInsensitive(migratedDisabledAgents ?? [], "receptionist");
+      if (receptionistEnabled && builtinAgents.receptionist) {
+        (config as { default_agent?: string }).default_agent = "receptionist";
+      } else {
+        (config as { default_agent?: string }).default_agent = "sisyphus";
+      }
 
       const agentConfig: Record<string, unknown> = {
         sisyphus: builtinAgents.sisyphus,
