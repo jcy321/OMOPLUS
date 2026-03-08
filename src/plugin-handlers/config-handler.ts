@@ -133,7 +133,7 @@ export function createConfigHandler(deps: ConfigHandlerDeps) {
       } else {
         const paths = getOpenCodeConfigPaths({ binary: "opencode", version: null })
         throw new Error(
-          'oh-my-opencode requires a default model.\n\n' +
+          'omoplus requires a default model.\n\n' +
           `Add this to ${paths.configJsonc}:\n\n` +
           '  "model": "anthropic/claude-sonnet-4-5"\n\n' +
           '(Replace with your preferred provider/model)'

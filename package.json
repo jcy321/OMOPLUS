@@ -1,6 +1,6 @@
 {
   "name": "omoplus",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "OMOPLUS - Enhanced OpenCode Plugin with Receptionist Agent for Better UX and Cost Efficiency",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,14 +11,15 @@
   "files": [
     "dist",
     "bin",
-    "postinstall.mjs"
+    "postinstall.mjs",
+    "assets"
   ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./schema.json": "./dist/oh-my-opencode.schema.json"
+    "./schema.json": "./assets/omoplus.schema.json"
   },
   "scripts": {
     "build": "bun build src/index.ts --outdir dist --target bun --format esm --external @ast-grep/napi && tsc --emitDeclarationOnly && bun build src/cli/index.ts --outdir dist/cli --target bun --format esm --external @ast-grep/napi && bun run build:schema",

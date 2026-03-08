@@ -491,12 +491,12 @@ To continue this session: session_id="${args.session_id}"`
          // Guard: require system default model for category delegation
          if (!systemDefaultModel) {
            const paths = getOpenCodeConfigPaths({ binary: "opencode", version: null })
-           return (
-             'oh-my-opencode requires a default model.\n\n' +
-             `Add this to ${paths.configJsonc}:\n\n` +
-             '  "model": "anthropic/claude-sonnet-4-5"\n\n' +
-             '(Replace with your preferred provider/model)'
-           )
+return (
+              'omoplus requires a default model.\n\n' +
+              `Add this to ${paths.configJsonc}:\n\n` +
+              '  "model": "anthropic/claude-sonnet-4-5"\n\n' +
+              '(Replace with your preferred provider/model)'
+            )
          }
 
          const availableModels = await fetchAvailableModels(client)

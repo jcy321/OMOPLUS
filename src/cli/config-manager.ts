@@ -131,7 +131,7 @@ export async function fetchNpmDistTags(packageName: string): Promise<NpmDistTags
   }
 }
 
-const PACKAGE_NAME = "oh-my-opencode"
+const PACKAGE_NAME = "omoplus"
 
 const PRIORITIZED_TAGS = ["latest", "beta", "next"] as const
 

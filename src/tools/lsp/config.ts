@@ -36,8 +36,8 @@ function getConfigPaths(): { project: string; user: string; opencode: string } {
   const cwd = process.cwd()
   const configDir = getOpenCodeConfigDir({ binary: "opencode" })
   return {
-    project: join(cwd, ".opencode", "oh-my-opencode.json"),
-    user: join(configDir, "oh-my-opencode.json"),
+    project: join(cwd, ".opencode", "omoplus.json"),
+    user: join(configDir, "omoplus.json"),
     opencode: join(configDir, "opencode.json"),
   }
 }

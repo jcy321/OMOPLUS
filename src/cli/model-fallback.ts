@@ -37,7 +37,7 @@ export interface GeneratedOmoConfig {
 const ZAI_MODEL = "zai-coding-plan/glm-4.7"
 
 const ULTIMATE_FALLBACK = "opencode/big-pickle"
-const SCHEMA_URL = "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json"
+const SCHEMA_URL = "https://raw.githubusercontent.com/jcy321/OMOPLUS/main/assets/omoplus.schema.json"
 
 function toProviderAvailability(config: InstallConfig): ProviderAvailability {
   return {

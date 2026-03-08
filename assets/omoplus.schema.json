@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "title": "Oh My OpenCode Configuration",
-  "description": "Configuration schema for oh-my-opencode plugin",
+  "$id": "https://raw.githubusercontent.com/jcy321/OMOPLUS/main/assets/omoplus.schema.json",
+  "title": "OMOPLUS Configuration",
+  "description": "Configuration schema for omoplus plugin",
   "type": "object",
   "properties": {
     "$schema": {
